@@ -1,6 +1,6 @@
 # SimpleConsoleMusicPlayer
 
-Commands (not case sensitive):
+Commands (not case sensitive):<br/>
 
 play [PathToMusicFile]:
 Plays the selected file. Can be used without path if player is only paused
