@@ -266,19 +266,14 @@ namespace SimpleMusicPlayer
                 }
 
                 string arg = "";
-                try
-                {
-                    arg = input.Split(new[] { ' ' }, 2)[1].Replace("\"", "");
-                    if (String.IsNullOrEmpty(arg))
-                    {
-                        throw new IndexOutOfRangeException();
-                    }
-                }
-                catch (IndexOutOfRangeException)
+
+                arg = input.Split(new[] { ' ' }, 2)[1].Replace("\"", "");
+                if (String.IsNullOrEmpty(arg))
                 {
                     WriteLine("No time was given to jump to.");
                     return;
                 }
+
                 int totalSeconds;
                 try
                 {
@@ -298,7 +293,7 @@ namespace SimpleMusicPlayer
                     }
                     catch (Exception e)
                     {
-                        WriteLine("The given argument is not a number or a timestamp");
+                        WriteLine("The given argument is neither a number nor a timestamp");
                         return;
                     }
                 }
